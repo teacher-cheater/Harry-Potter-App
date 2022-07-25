@@ -1,10 +1,8 @@
 import {Card} from "../Card/Card.jsx";
 import {persons} from "../../persons.js";
 import Fuse from "fuse.js";
-// import {useState} from "react";
-// import {App} from "../../App.js";
 
-export function Main({inputTextValue, selectOpinion}) {
+export function Main({inputTextValue}) {
 
     const fuse = new Fuse(persons, {
         keys: [
@@ -16,14 +14,16 @@ export function Main({inputTextValue, selectOpinion}) {
             'wand',
             'alive'
         ],
+        threshold: 0.3,
         includeScore: true
     })
 
-    const results = fuse.search(inputTextValue);
+    const results = fuse.search(inputTextValue)
 
-    const personResult = inputTextValue && selectOpinion
+
+    const personResult = inputTextValue
         ? results.map((elem) => elem.item)
-        : persons;
+        : persons
 
     return (
         <main className="main">
@@ -38,9 +38,9 @@ export function Main({inputTextValue, selectOpinion}) {
                             gender={person.gender}
                             house={person.house}
                             wand={person.wand.core}
-                            alive={person.alive}
+                            alive={person.alive ? "yes" : "no"}
                         />
-                    ))};
+                        ))}
                 </div>
             </div>
         </main>

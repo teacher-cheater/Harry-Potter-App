@@ -13,19 +13,12 @@
   }
 }
 
-.cart__image {
+.card__picture {
   width: 100%;
   height: auto;
-}
-.card__picture {
   object-fit: cover;
 }
-@media (max-width: 767.98px) {
-  .card__picture {
-    width: 320px;
-    height: 190px;
-  }
-}
+
 .card__content {
   color: #152536;
   line-height: 1.8;
