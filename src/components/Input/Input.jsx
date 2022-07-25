@@ -1,4 +1,5 @@
-export function Input({ input, setInput }) {
+
+export function Input({ inputTextValue, setInputTextValue, selectOpinion, setSelectOpinion  }) {
   return (
     <form className="header__registration">
       <div className="header__block-choice-1">
@@ -8,22 +9,23 @@ export function Input({ input, setInput }) {
             placeholder="Hermione"
             className="header__input-text"
             type="text"
-            value={input}
-            onChange={(event) => setInput(event.target.value)}
+            value={inputTextValue}
+            onChange={(event) => setInputTextValue(event.target.value)}
           />
         </label>
       </div>
       <div className="header__block-choice-2">
         <label className="header__school-choice">
           <p>School</p>
-          <select name="school" className="header__school">
-            <option value="" disabled select="true">
+          <select name="school" className="header__school" onChange={(event) => setSelectOpinion(event.target)} >
+            <option value="" defaultValue select='true'>
               Choose one
             </option>
             <option value="Gryffindor"> Gryffindor</option>
             <option value="Slytherin">Slytherin</option>
             <option value="Hufflepuff">Hufflepuff</option>
             <option value="Ravenclaw">Ravenclaw</option>
+
           </select>
         </label>
       </div>

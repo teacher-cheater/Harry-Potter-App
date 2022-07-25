@@ -1,13 +1,23 @@
-//import { persons } from './persons';
-import { Header } from './components/Header/Header.jsx';
-import { Main } from './components/Main/Main.jsx';
+
+import {useState} from "react";
+import {Header} from "./components/Header/Header";
+import {Main} from "./components/Main/Main";
+import {Input} from "./components/Input/Input";
+// import {Select} from "./components/Input/Input";
+
+import React from "react";
 
 
 function App() {
+    const [inputTextValue, setInputTextValue] = useState("");
+    const [selectOpinion, setSelectOpinion] = useState("");
+
   return (
     <div className="wrapper">
       <Header />
-      <Main />
+        <Input inputTextValue={inputTextValue} setInputTextValue={setInputTextValue}
+                selectOpinion={selectOpinion} setSelectOpinion={setSelectOpinion}/>
+        <Main inputTextValue={inputTextValue} /> {/*передаём пропс из input*/}
     </div>
   );
 }

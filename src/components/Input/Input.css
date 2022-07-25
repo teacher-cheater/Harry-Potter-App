@@ -2,11 +2,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
 }
 
 @media (max-width: 767.98px) {
   .header__registration {
     display: block;
+    width: 100%;
   }
 }
 
@@ -39,7 +41,7 @@
   border-radius: 4px;
   font-weight: 400;
   font-size: 16px;
-  width: 100%;
+  /*width: 100%;*/
   padding: 8px 0 8px 17px;
   width: 452px;
   height: 38px;

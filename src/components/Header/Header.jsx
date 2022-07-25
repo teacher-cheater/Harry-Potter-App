@@ -1,4 +1,3 @@
-import { Input } from "../Input/Input.jsx";
 
 export function Header() {
   return (
@@ -10,7 +9,6 @@ export function Header() {
             View all characters from the Harry Potter universe
           </p>
         </div>
-        <Input />
       </div>
     </header>
   );
