@@ -11,12 +11,22 @@ function App() {
     const [inputTextValue, setInputTextValue] = useState("");
     const [selectOpinion, setSelectOpinion] = useState("");
 
-  return (
+    // const [liked, setLiked] = useState(true);
+
+    // function Card({name, liked, onLike, onDislike}) {
+    //     return(
+    //         <button onClick={()=>(liked? onDislike(name): onLike(name))}> {name}:{liked.toString()}<button/>
+    //         //     )
+    // }
+
+
+    return (
     <div className="wrapper">
       <Header />
         <Input inputTextValue={inputTextValue} setInputTextValue={setInputTextValue}
                 selectOpinion={selectOpinion} setSelectOpinion={setSelectOpinion}/>
-        <Main inputTextValue={inputTextValue} /> {/*передаём пропс из input*/}
+
+        <Main inputTextValue={inputTextValue} selectOpinion={selectOpinion}/> {/*передаём пропс из input*/}
     </div>
   );
 }

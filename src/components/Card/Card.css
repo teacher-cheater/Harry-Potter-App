@@ -15,7 +15,7 @@
 
 .card__picture {
   width: 100%;
-  height: auto;
+  height: 280px;
   object-fit: cover;
 }
 
@@ -23,6 +23,7 @@
   color: #152536;
   line-height: 1.8;
   padding: 24px;
+  position: relative;
 }
 
 .card__title {
@@ -35,4 +36,26 @@
   font-weight: 500;
 }
 
+.card__items{
+  position: absolute;
+  top: -262px;
+  right: 20px;
+  background: #FFFFFF;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.16);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
 
+}
+
+.card__likes{
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.card__icon{
+
+}

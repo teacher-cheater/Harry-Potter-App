@@ -21,6 +21,8 @@ export function Main({inputTextValue}) {
     const results = fuse.search(inputTextValue)
 
 
+    /*нужно отфлитровать карточки по школам и вывести учеников*/
+
     const personResult = inputTextValue
         ? results.map((elem) => elem.item)
         : persons
@@ -39,6 +41,8 @@ export function Main({inputTextValue}) {
                             house={person.house}
                             wand={person.wand.core}
                             alive={person.alive ? "yes" : "no"}
+                            liked={true}
+
                         />
                         ))}
                 </div>
