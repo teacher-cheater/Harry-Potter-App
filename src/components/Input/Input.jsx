@@ -17,7 +17,7 @@ export function Input({ inputTextValue, setInputTextValue, selectOpinion, setSel
       <div className="header__block-choice-2">
         <label className="header__school-choice">
           <p>School</p>
-          <select name="school" className="header__school" onChange={(event) => setSelectOpinion(event.target)} >
+          <select name="school" className="header__school" onChange={(event) => setSelectOpinion(event.target.value)} >
             <option value="" defaultValue select='true'>
               Choose one
             </option>

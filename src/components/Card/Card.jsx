@@ -1,11 +1,13 @@
 import like from "../../public/like.svg";
 import empty from "../../public/empty.svg";
+import {useState} from "react";
 
+export function Card({ image, name, actor, gender, house, wand, alive}) {
 
-export function Card({liked, image, name, actor, gender, house, wand, alive}) {
+    const [likeActive, setLikeActive] = useState(false);
 
-    function click(){
-        if(!localStorage.getItem(name)){
+    function addFavoriteCard() {
+        if (!localStorage.getItem(name)) {
             localStorage.setItem(name, "like");
         } else {
             localStorage.removeItem(name);
@@ -17,7 +19,6 @@ export function Card({liked, image, name, actor, gender, house, wand, alive}) {
             <div className="card">
                 <div className="card__image">
                     <img
-                        style={{width: "334", height: "192"}}
                         src={image}
                         className="card__picture"
                         alt={name}
@@ -25,10 +26,14 @@ export function Card({liked, image, name, actor, gender, house, wand, alive}) {
                 </div>
                 <div className="card__content">
                     <div className="card__items">
-                        <button onClick={click} className="card__likes">
+                        <button className="card__likes"
+                                onClick={() => {
+                                    addFavoriteCard();
+                                    setLikeActive(!likeActive);
+                                }}>
                             <img alt={"like"}
                                  className="card__icon"
-                                 src={liked ? like : empty}
+                                 src={likeActive ? like : empty}
                             />
                         </button>
                     </div>
