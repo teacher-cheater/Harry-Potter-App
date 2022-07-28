@@ -5,10 +5,12 @@
 @import url("./components/Main/Main.css");
 @import url("./components/Card/Card.css");
 @import url("./components/Input/Input.css");
+@import url("./components/Favorites/Favorites.css");
+
 
 [class*="__container"] {
   max-width: 718px;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 40px 15px;
 }
 
@@ -68,7 +70,7 @@ html {
 /*----------------------------------*/
 body {
   line-height: 1;
-  font-family: "Inter";
+  /*font-family: "Inter";*/
 }
 
 .wrapper {
@@ -86,6 +88,6 @@ body {
 /* ------------------------------ */
 .main {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
+  /*-ms-flex-positive: 1;*/
   flex-grow: 1;
 }

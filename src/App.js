@@ -1,8 +1,7 @@
 import {useState} from "react";
-import {Header} from "./components/Header/Header";
 import {Main} from "./components/Main/Main";
-import {Input} from "./components/Input/Input";
-import {Favorites} from "./Favorites.page"
+import {Favorites} from "./components/Favorites/Favorites.page"
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 import React from "react";
 import Fuse from "fuse.js";
@@ -28,8 +27,6 @@ function App() {
         setLikedNames(likedNames.filter((likedName) => likedName !== name))
     }
 
-
-
     const fuse = new Fuse(persons, {
         keys: [
             'image',
@@ -53,17 +50,31 @@ function App() {
 
     const resultSearchSchool = personResult.filter((elem) => elem.house.includes(selectOpinion))
 
+    if (window.location.pathname === "/liked") {
+        return <Favorites characters={resultSearchSchool} onLike={like} likedNames={likedNames}
+                          onDislike={dislike}/>;
+    }
 
     return (
-        <div className="wrapper">
-            <Header/>
-            <Input inputTextValue={inputTextValue} setInputTextValue={setInputTextValue}
-                   selectOpinion={selectOpinion} setSelectOpinion={setSelectOpinion}/>
-
-            <Main characters={resultSearchSchool} onLike={like} likedNames={likedNames}
-                  onDislike={dislike}/> {/*передаём пропс из input*/}
-
-        </div>
+        <React.StrictMode>
+            <BrowserRouter>
+                <Routes>
+                    <Route
+                        path="/"
+                        element={
+                            <Main characters={resultSearchSchool} onLike={like} likedNames={likedNames}
+                                  onDislike={dislike} setInputTextValue={setInputTextValue}
+                                  setSelectOpinion={setSelectOpinion}/>
+                        }/>
+                    <Route
+                        path="liked"
+                        element={
+                            <Favorites/>
+                        }
+                    />
+                </Routes>
+            </BrowserRouter>
+        </React.StrictMode>
     );
 }
 
