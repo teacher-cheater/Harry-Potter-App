@@ -1,18 +1,7 @@
 import like from "../../public/like.svg";
 import empty from "../../public/empty.svg";
-import {useState} from "react";
 
-export function Card({ image, name, actor, gender, house, wand, alive}) {
-
-    const [likeActive, setLikeActive] = useState(false);
-
-    function addFavoriteCard() {
-        if (!localStorage.getItem(name)) {
-            localStorage.setItem(name, "like");
-        } else {
-            localStorage.removeItem(name);
-        }
-    }
+export function Card({image, name, actor, gender, house, wand, alive, onLike, onDislike, liked}) {
 
     return (
         <div className="cards">
@@ -28,12 +17,11 @@ export function Card({ image, name, actor, gender, house, wand, alive}) {
                     <div className="card__items">
                         <button className="card__likes"
                                 onClick={() => {
-                                    addFavoriteCard();
-                                    setLikeActive(!likeActive);
+                                    liked ? onDislike(name) : onLike(name)
                                 }}>
                             <img alt={"like"}
                                  className="card__icon"
-                                 src={likeActive ? like : empty}
+                                 src={liked ? like : empty}
                             />
                         </button>
                     </div>
@@ -42,8 +30,8 @@ export function Card({ image, name, actor, gender, house, wand, alive}) {
                         <p>Actor: {actor}</p>
                         <p>Gender: {gender}</p>
                         <p>House: {house}</p>
-                        <p>Wand core: {wand}</p>
-                        <p>Alive: {alive}</p>
+                        <p>Wand core: {wand.core}</p>
+                        <p>Alive: {alive ? "yes" : "no"}</p>
                     </div>
                 </div>
             </div>
