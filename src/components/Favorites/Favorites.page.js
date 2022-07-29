@@ -1,11 +1,9 @@
 import {Card} from "../Card/Card";
-// import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
-//исправить страницу с liked, разобраться с router
 
 export function Favorites({characters, onLike, onDislike, likedNames}){
     const resultFilterCharacter = characters.filter((elem)=> likedNames.includes(elem.name));
-    console.log(resultFilterCharacter)
     return (
         <main className="main">
             <div className="main__container">
@@ -21,12 +19,12 @@ export function Favorites({characters, onLike, onDislike, likedNames}){
                         />
                     ))}
                 </div>
-                {/*<Link to={'/'}>*/}
-                {/*    <button type="button" className="main__btn">*/}
-                {/*        <img className="main__picture" alt="" src={"<<<"}/>*/}
-                {/*        Back*/}
-                {/*    </button>*/}
-                {/*</Link>*/}
+                <Link to='/'>
+                    <button type="button" className="main__btn">
+                        <img className="main__picture" alt="" src=""/>
+                        Back
+                    </button>
+                </Link>
             </div>
         </main>
     )

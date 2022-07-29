@@ -1,4 +1,4 @@
-export const persons = [
+export const person = [
    {
       name: "Harry Potter",
       species: "human",

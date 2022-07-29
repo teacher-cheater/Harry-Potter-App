@@ -5,7 +5,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 import React from "react";
 import Fuse from "fuse.js";
-import {persons} from "./persons";
+import {person} from "./person";
 
 const likedCard = JSON.parse(localStorage.getItem("liked")) ?? [];
 
@@ -27,7 +27,7 @@ function App() {
         setLikedNames(likedNames.filter((likedName) => likedName !== name))
     }
 
-    const fuse = new Fuse(persons, {
+    const fuse = new Fuse(person, {
         keys: [
             'image',
             'name',
@@ -46,14 +46,10 @@ function App() {
 
     const personResult = inputTextValue
         ? results.map((elem) => elem.item)
-        : persons
+        : person
 
     const resultSearchSchool = personResult.filter((elem) => elem.house.includes(selectOpinion))
 
-    if (window.location.pathname === "/liked") {
-        return <Favorites characters={resultSearchSchool} onLike={like} likedNames={likedNames}
-                          onDislike={dislike}/>;
-    }
 
     return (
         <React.StrictMode>
@@ -69,9 +65,9 @@ function App() {
                     <Route
                         path="liked"
                         element={
-                            <Favorites/>
-                        }
-                    />
+                            <Favorites characters={resultSearchSchool} onLike={like} likedNames={likedNames}
+                                       onDislike={dislike}/>
+                        }/>
                 </Routes>
             </BrowserRouter>
         </React.StrictMode>
