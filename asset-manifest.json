@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/teacher-cheater/Harry-Potter-App/static/css/main.8b36cc62.css",
-    "main.js": "/teacher-cheater/Harry-Potter-App/static/js/main.dd70c5e5.js",
-    "index.html": "/teacher-cheater/Harry-Potter-App/index.html",
-    "static/media/empty.svg": "/teacher-cheater/Harry-Potter-App/static/media/empty.cfb3374a8739fefc1f544bf034a5b662.svg",
-    "static/media/like.svg": "/teacher-cheater/Harry-Potter-App/static/media/like.780ebc7d4c10690fda53cf4761560d8c.svg",
-    "main.8b36cc62.css.map": "/teacher-cheater/Harry-Potter-App/static/css/main.8b36cc62.css.map",
-    "main.dd70c5e5.js.map": "/teacher-cheater/Harry-Potter-App/static/js/main.dd70c5e5.js.map"
+    "main.css": "/Harry-Potter-App/static/css/main.8b36cc62.css",
+    "main.js": "/Harry-Potter-App/static/js/main.ddff0c54.js",
+    "index.html": "/Harry-Potter-App/index.html",
+    "static/media/empty.svg": "/Harry-Potter-App/static/media/empty.cfb3374a8739fefc1f544bf034a5b662.svg",
+    "static/media/like.svg": "/Harry-Potter-App/static/media/like.780ebc7d4c10690fda53cf4761560d8c.svg",
+    "main.8b36cc62.css.map": "/Harry-Potter-App/static/css/main.8b36cc62.css.map",
+    "main.ddff0c54.js.map": "/Harry-Potter-App/static/js/main.ddff0c54.js.map"
   },
   "entrypoints": [
     "static/css/main.8b36cc62.css",
-    "static/js/main.dd70c5e5.js"
+    "static/js/main.ddff0c54.js"
   ]
 }
