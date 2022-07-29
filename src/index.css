@@ -1,6 +1,5 @@
 /*---------------------*/
-@import url("https://fonts.googleapis.com/css?family=Inter:regular,700,800&display=swap");
-/*---------------------*/
+
 @import url("./components/Header/Header.css");
 @import url("./components/Main/Main.css");
 @import url("./components/Card/Card.css");
@@ -70,7 +69,7 @@ html {
 /*----------------------------------*/
 body {
   line-height: 1;
-  /*font-family: "Inter";*/
+  font-family: "Inter", sans-serif;
 }
 
 .wrapper {
