@@ -1,15 +1,14 @@
 {
   "files": {
     "main.css": "/Harry-Potter-App/static/css/main.8b36cc62.css",
-    "main.js": "/Harry-Potter-App/static/js/main.ddff0c54.js",
+    "main.js": "/Harry-Potter-App/static/js/main.f4ddc63e.js",
     "index.html": "/Harry-Potter-App/index.html",
-    "static/media/empty.svg": "/Harry-Potter-App/static/media/empty.cfb3374a8739fefc1f544bf034a5b662.svg",
     "static/media/like.svg": "/Harry-Potter-App/static/media/like.780ebc7d4c10690fda53cf4761560d8c.svg",
     "main.8b36cc62.css.map": "/Harry-Potter-App/static/css/main.8b36cc62.css.map",
-    "main.ddff0c54.js.map": "/Harry-Potter-App/static/js/main.ddff0c54.js.map"
+    "main.f4ddc63e.js.map": "/Harry-Potter-App/static/js/main.f4ddc63e.js.map"
   },
   "entrypoints": [
     "static/css/main.8b36cc62.css",
-    "static/js/main.ddff0c54.js"
+    "static/js/main.f4ddc63e.js"
   ]
 }
