@@ -1,9 +1,8 @@
 import {Card} from "../Card/Card.jsx";
-import like from "../../public/like.svg";
+import like from "../Card/like.svg";
 import {Link} from "react-router-dom";
 import {Header} from "../Header/Header";
 import {Input} from "../Input/Input";
-// import React from "@types/react";
 
 export function Main({characters, onLike, onDislike, likedNames, setInputTextValue, setSelectOpinion}) {
 

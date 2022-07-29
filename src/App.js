@@ -15,10 +15,8 @@ function App() {
 
     const [likedNames, setLikedNames] = useState(likedCard);
     localStorage.setItem("liked", JSON.stringify(likedNames));
-    console.log(likedNames)
 
     function like(name) {
-        console.log(name)
         const likes = [...likedNames, name];
         setLikedNames(likes)
     }
@@ -53,7 +51,7 @@ function App() {
 
     return (
         <React.StrictMode>
-            <BrowserRouter>
+            <BrowserRouter basename="/Harry-Potter-App">
                 <Routes>
                     <Route
                         path="/"

@@ -1,5 +1,5 @@
-import like from "../../public/like.svg";
-import empty from "../../public/empty.svg";
+import like from "./like.svg";
+import empty from "./empty.svg";
 
 export function Card({image, name, actor, gender, house, wand, alive, onLike, onDislike, liked}) {
 
@@ -8,7 +8,7 @@ export function Card({image, name, actor, gender, house, wand, alive, onLike, on
             <div className="card">
                 <div className="card__image">
                     <img
-                        src={image}
+                        src={process.env.PUBLIC_URL +`/images/${image}`}
                         className="card__picture"
                         alt={name}
                     />
