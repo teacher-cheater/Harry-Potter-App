@@ -18,7 +18,7 @@ export function Card({
       <div className="card">
         <div className="card__image">
           <img
-            src={process.env.PUBLIC_URL + `/images/${image}`}
+            src={`${process.env.PUBLIC_URL}/images/${image}`}
             className="card__picture"
             alt={name}
           />
