@@ -6,7 +6,6 @@
 @import url("./components/Input/Input.css");
 @import url("./components/Favorites/Favorites.css");
 
-
 [class*="__container"] {
   max-width: 718px;
   margin: 0 auto;
@@ -60,6 +59,7 @@ html,
 body {
   height: 100%;
   background: #f5f5f5;
+  font-family: "Inter";
 }
 
 html {
@@ -69,10 +69,11 @@ html {
 /*----------------------------------*/
 body {
   line-height: 1;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
 }
 
 .wrapper {
+  font-family: "Inter";
   min-height: 100%;
   overflow: hidden;
   display: -webkit-box;

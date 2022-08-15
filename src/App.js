@@ -1,11 +1,11 @@
-import {useState} from "react";
-import {Main} from "./components/Main/Main";
-import {Favorites} from "./components/Favorites/Favorites.page"
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { useState } from "react";
+import { Main } from "./components/Main/Main";
+import { Favorites } from "./components/Favorites/Favorites.page.jsx"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import React from "react";
 import Fuse from "fuse.js";
-import {person} from "./person";
+import { person } from "./person";
 
 const likedCard = JSON.parse(localStorage.getItem("liked")) ?? [];
 
@@ -57,15 +57,15 @@ function App() {
                         path="/"
                         element={
                             <Main characters={resultSearchSchool} onLike={like} likedNames={likedNames}
-                                  onDislike={dislike} setInputTextValue={setInputTextValue}
-                                  setSelectOpinion={setSelectOpinion}/>
-                        }/>
+                                onDislike={dislike} setInputTextValue={setInputTextValue}
+                                setSelectOpinion={setSelectOpinion} />
+                        } />
                     <Route
                         path="liked"
                         element={
                             <Favorites characters={resultSearchSchool} onLike={like} likedNames={likedNames}
-                                       onDislike={dislike}/>
-                        }/>
+                                onDislike={dislike} />
+                        } />
                 </Routes>
             </BrowserRouter>
         </React.StrictMode>

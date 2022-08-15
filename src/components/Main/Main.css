@@ -1,6 +1,6 @@
-
-.main__container{
+.main__container {
   position: relative;
+  font-family: inherit;
 }
 
 .main__content {
@@ -18,13 +18,13 @@
   }
 }
 
-.main__btn{
+.main__btn {
   position: fixed;
   z-index: 5;
   bottom: 40px;
   right: 10px;
   display: flex;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0 8px 35px rgba(0, 0, 0, 0.16);
   border-radius: 48px;
   padding: 10px 20px 10px 12px;
@@ -35,6 +35,6 @@
   cursor: pointer;
 }
 
-.main__picture{
+.main__picture {
   padding: 0 5px;
 }
