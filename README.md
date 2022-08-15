@@ -4,6 +4,8 @@
 
 [Посмотреть онлайн](https://teacher-cheater.github.io/Harry-Potter-App/)
 
+![2022-08-16_00-45-36](https://user-images.githubusercontent.com/85887160/184725765-b441525a-146f-4701-bad3-ec9094dba7a4.png)
+![2022-08-16_00-59-21](https://user-images.githubusercontent.com/85887160/184725762-e034a023-f6f8-4f6d-8a7d-b8cc0a83b525.png)
 
 
 
